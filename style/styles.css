@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#itachi {
+  width: 250px;
+  height: 370px;
+  z-index: 1;
+}
+#sasuke {
+  width: 280px;
+  height: 370px;
+  z-index: 1;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+}
+.card {
+  width: 100vw;
+  height: 45vh;
+  background-color: #1a0133;
+  position: relative;
+  margin: 0 1.5rem;
+  padding: 5rem 2.5rem;
+  border-radius: 0.5rem;
+  color: rgb(255, 211, 211);
+  font-family: "Lato", sans-serif;
+  position: relative;
+}
+p {
+  font-size: 0.7rem;
+  margin: 0.5rem 0;
+}
+p:nth-child(odd) {
+  color: rgba(180, 180, 180, 0.767);
+  font-size: 0.6rem;
+}
+img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.content1,
+.content2 {
+  margin: 0;
+  padding: 0;
+  transform: translateX(10rem);
+  opacity: 0;
+  max-width: 15rem;
+  z-index: -1;
+}
+
+.card:hover #itachi {
+  width: 270px;
+  height: 420px;
+  transition: all 1s ease;
+  transform: translate(0, 0);
+}
+.card:hover #sasuke {
+  width: 320px;
+  height: 420px;
+  transition: all 1s ease;
+  transform: translate(0, 0);
+}
+.card:hover {
+  transform: translateY(-0.1rem);
+  transition: all 0.4s linear;
+  box-shadow: 0px 2px 0.5rem black;
+}
+.card:hover .content1 {
+  animation: fadeIn 0.9s linear 0.3s forwards;
+}
+.card:hover .content2 {
+  animation: fadeIn 0.9s linear 0.3s forwards;
+}
+@keyframes fadeIn {
+  from {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1350px) {
+  .card:hover #sasuke {
+    width: 300px;
+    height: 420px;
+  }
+}
+@media (max-width: 1250px) {
+  .card:hover #sasuke {
+    width: 280px;
+    height: 390px;
+    right: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .card:hover #itachi {
+    width: 250px;
+    height: 390px;
+  }
+  .card {
+    padding: 2.5rem 1rem;
+    width: 100vw;
+    height: 40vh;
+  }
+}
+@media (max-width: 900px) {
+  body{
+    flex-direction: column;
+  }
+  .card {
+    width: 60vw;
+    height: 40vh;
+    margin: 1.5rem 1rem 0 1rem;
+    padding: 3em 1.5rem;
+  }
+  #itachi {
+    width: 220px;
+    height: 340px;
+  }
+  #sasuke {
+    width: 230px;
+    height: 320px;
+  }
+  .card:hover #itachi {
+    width: 230px;
+    height: 370px;
+    transition: all 1s ease;
+    transform: translate(0, 0);
+  }
+  .card:hover #sasuke {
+    width: 250px;
+    height: 360px;
+    transition: all 1s ease;
+    transform: translate(0, 0);
+  }
+}
