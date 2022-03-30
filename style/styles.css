@@ -76,10 +76,10 @@ img {
   box-shadow: 0px 2px 0.5rem black;
 }
 .card:hover .content1 {
-  animation: fadeIn 0.9s linear 0.3s forwards;
+  animation: fadeIn 0.5s linear 0.2s forwards;
 }
 .card:hover .content2 {
-  animation: fadeIn 0.9s linear 0.3s forwards;
+  animation: fadeIn 0.5s linear 0.2s forwards;
 }
 @keyframes fadeIn {
   from {
@@ -117,7 +117,7 @@ img {
   }
 }
 @media (max-width: 900px) {
-  body{
+  body {
     flex-direction: column;
   }
   .card {
@@ -145,5 +145,32 @@ img {
     height: 360px;
     transition: all 1s ease;
     transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: 50vw;
+    height: 40vh;
+  }
+  .card:hover {
+    height: 75vh;
+    padding: 1.5rem 1rem;
+  }
+  .card:hover #itachi {
+    transform: translate(-50%, 0);
+  }
+  .card:hover #sasuke {
+    transform: translate(-50%, 0);
+  }
+  @keyframes fadeIn {
+    from {
+      transform: translateY(10rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
